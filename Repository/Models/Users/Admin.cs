@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Models.Users
 {
+    [Table("Администраторы")]
     public class Admin
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
