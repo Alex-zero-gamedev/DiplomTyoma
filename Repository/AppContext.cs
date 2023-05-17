@@ -19,14 +19,11 @@ namespace Repository
         {
             optionsBuilder.UseNpgsql("Host=localhost;Port=5433;Database=TutorialDB;Username=postgres;Password=8904");
         }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            
-        }
 
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         public DbSet<College> Colleges { get; set; }
         public DbSet<Discipline> Disciplines { get; set; }
