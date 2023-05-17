@@ -10,6 +10,7 @@ using Repository.Models.Users;
 namespace Repository.Models
 {
     [Table("Классы")]
+    //МНОГИЕ КО МНОГИМ
     public class Group
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]

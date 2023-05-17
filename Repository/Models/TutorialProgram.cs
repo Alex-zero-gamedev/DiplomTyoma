@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Models
 {
+    //МНОГИЕ КО МНОГИМ
     [Table("Программы_обучения")]
     public class TutorialProgram
     {

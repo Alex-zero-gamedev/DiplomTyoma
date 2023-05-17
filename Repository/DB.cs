@@ -4,20 +4,20 @@ using Repository.Models.Users;
 
 namespace Repository
 {
-    public class AppContext : DbContext
+    public class DB : DbContext
     {
-        private static AppContext _instance { get; set; }
-        public static AppContext GetContext()
+        private static DB _instance { get; set; }
+        public static DB GetContext()
         {
-            if (_instance == null) _instance= new AppContext();
+            if (_instance == null) _instance= new DB();
             return _instance;
         }
-        public AppContext(){
+        public DB(){
             Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5433;Database=TutorialDB;Username=postgres;Password=8904");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=DiplomDB;Trusted_Connection=True;");
         }
 
         public DbSet<Account> Accounts { get; set; }

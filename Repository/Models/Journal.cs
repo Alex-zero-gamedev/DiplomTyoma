@@ -9,6 +9,7 @@ using Repository.Models.Users;
 
 namespace Repository.Models
 {
+    //МНОГИЕ КО МНОГИМ
     [Table("Журнал")]
     public class Journal
     {
