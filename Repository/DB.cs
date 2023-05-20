@@ -20,6 +20,11 @@ namespace Repository
             optionsBuilder.UseSqlServer(@"Server=localhost;Database=DiplomDB;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=False");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Group>().HasOne(e => e.Kurator).WithMany().OnDelete(DeleteBehavior.Restrict);
+        }
+
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Student> Students { get; set; }
