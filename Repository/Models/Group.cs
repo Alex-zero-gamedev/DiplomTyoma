@@ -15,8 +15,8 @@ namespace Repository.Models
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
-        [Required, Column("Курс")]public int Course { get; set; }
+        [Required, Column("Название")] public string Name { get; set; }
+        [Column("Курс")] public int Course { get; set; }
         [Required, ForeignKey("Куратор")] public Teacher Kurator { get; set; }
         [Required, ForeignKey("Староста")] public Student Starosta { get; set; }
     }
