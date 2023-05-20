@@ -17,7 +17,7 @@ namespace Repository
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=DiplomDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=DiplomDB;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=False");
         }
 
         public DbSet<Account> Accounts { get; set; }
