@@ -17,6 +17,6 @@ namespace Repository.Models
         public int Id { get; set; }
         [Required, ForeignKey("Код_студента")] public Student Student { get; set; }
         [Required, ForeignKey("Куратор")] public Discipline Discipline { get; set; }
-        [Required, ForeignKey("Оценка")] public int Ball { get; set; }
+        [Required, Column("Оценка")] public int Ball { get; set; }
     }
 }
