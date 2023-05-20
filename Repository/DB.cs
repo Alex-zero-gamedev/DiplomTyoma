@@ -13,6 +13,7 @@ namespace Repository
             return _instance;
         }
         public DB(){
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
