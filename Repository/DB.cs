@@ -39,5 +39,6 @@ namespace Repository
         public DbSet<Journal> Journals { get; set; }
         public DbSet<Special> Specials { get; set; }
         public DbSet<TutorialProgram> TutorialPrograms { get; set; }
+        public DbSet<CalendarTutorial> TutorialPrograms { get; set; }
     }
 }
