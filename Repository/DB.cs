@@ -13,8 +13,9 @@ namespace Repository
             return _instance;
         }
         public DB(){
-            Database.EnsureDeleted();
             Database.EnsureCreated();
+            Specials.Add(new Special() { Name = "Математика", Number = 1 });
+            SaveChanges();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
