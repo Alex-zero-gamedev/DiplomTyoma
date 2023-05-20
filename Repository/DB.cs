@@ -19,7 +19,7 @@ namespace Repository
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=DiplomDB;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=False");
+            optionsBuilder.UseSqlServer(@"Server=ARTEMILYAN\MSSQLSERVER01;Database=DiplomDB;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=False");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
