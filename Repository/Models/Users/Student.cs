@@ -11,7 +11,7 @@ namespace Repository.Models.Users
     [Table("Обучающийся")]
     public class Student
     {
-        [Key, Column("Код_обучающегося"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Required, Column("Код_обучающегося"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required, ForeignKey("Код_аккаунта")] public Account account { get; set; }
         [Required, Column("Телефон")] public string PhoneNumber { get; set; }

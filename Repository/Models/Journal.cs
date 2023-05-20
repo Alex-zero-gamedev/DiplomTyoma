@@ -13,7 +13,7 @@ namespace Repository.Models
     [Table("Журнал")]
     public class Journal
     {
-        [Key, Column("Код_записи_журнала"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Required, Column("Код_записи_журнала"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required, ForeignKey("Код_студента")] public Student Student { get; set; }
         [Required, ForeignKey("Куратор")] public Discipline Discipline { get; set; }

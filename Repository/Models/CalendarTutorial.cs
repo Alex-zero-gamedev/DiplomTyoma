@@ -12,7 +12,7 @@ namespace Repository.Models
     [Table("Расписание")]
     public class CalendarTutorial
     {
-        [Key, Column("Код_записи_расписания"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Required, Column("Код_записи_расписания"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required, ForeignKey("Группа")] Group Group { get; set; }
         [Required, ForeignKey("Занятие")] Discipline Discipline { get; set; }
