@@ -14,8 +14,8 @@ namespace Repository.Models
     {
         [Key, Required, Column("Код_записи_расписания"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required, ForeignKey("Группа")] Group Group { get; set; }
-        [Required, ForeignKey("Занятие")] Discipline Discipline { get; set; }
-        [Required, ForeignKey("Начало занятия")] DateTime TimeStartDiscipline { get; set; }
+        [Required, ForeignKey("Группа")] public Group Group { get; set; }
+        [Required, ForeignKey("Занятие")] public Discipline Discipline { get; set; }
+        [Required, ForeignKey("Начало занятия")] public DateTime TimeStartDiscipline { get; set; }
     }
 }
