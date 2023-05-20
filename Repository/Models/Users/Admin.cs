@@ -11,7 +11,7 @@ namespace Repository.Models.Users
     [Table("Администраторы")]
     public class Admin
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column("Код_администратора"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required, ForeignKey("Код_аккаунта")] public Account Account { get; set; }  
     }

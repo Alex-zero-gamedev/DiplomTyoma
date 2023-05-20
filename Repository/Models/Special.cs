@@ -11,7 +11,7 @@ namespace Repository.Models
     [Table("Специальности")]
     public class Special
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column("Код_специальности"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required, Column("Номер")] public int Number { get; set; }
         [Required, Column("Название")] public string Name { get; set; }

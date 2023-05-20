@@ -11,7 +11,7 @@ namespace Repository.Models
     [Table("Занятия")]
     public class Discipline
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column("Код_занятия"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required, Column("Название_занятия")] public string Name { get; set; }
     }

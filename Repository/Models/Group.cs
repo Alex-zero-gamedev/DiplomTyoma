@@ -13,7 +13,7 @@ namespace Repository.Models
     //МНОГИЕ КО МНОГИМ
     public class Group
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column("Код_класса"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required, Column("Название")] public string Name { get; set; }
         [Required, Column("Курс")] public int Course { get; set; }

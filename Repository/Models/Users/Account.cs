@@ -11,7 +11,7 @@ namespace Repository.Models.Users
     [Table("Аккаунты")]
     public class Account
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column("Код_аккаунта"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required, Column("Логин")] public string Login { get; set; }
